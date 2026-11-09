@@ -1,0 +1,18 @@
+{
+  "title": "Preregistration: revision plan D and journal extension J for Validating LLM User Simulators for Information Cocoon Research",
+  "upload_type": "publication",
+  "publication_type": "other",
+  "description": "Two analysis plans written before any new run. Plan D addresses the review of TCSS-2026-09-1681; Plan J adds EB-NeRD small, Llama-3.1-8B-Instruct, subcategory metrics and a prompt sensitivity check. Chinese originals govern; English files are translations. SHA-256 hashes are listed in README.md.",
+  "creators": [
+    {
+      "name": "Zhang, Yunan"
+    }
+  ],
+  "license": "cc-by-4.0",
+  "keywords": [
+    "preregistration",
+    "LLM user simulation",
+    "information cocoons",
+    "news recommendation"
+  ]
+}
