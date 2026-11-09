@@ -121,3 +121,18 @@ python scripts/d_track.py e1 --data ebnerd --gen {g2,g4} --arm cal
 python scripts/d_track.py placebo --data ebnerd --gen {g2,g3,g4} --seed 0
 python scripts/d_track.py e3 --data ebnerd --gen {g2,g4} --rec nrms --seed 0 [--calibrate]
 ```
+
+## 修订 1（2026-11-10，任何 EB-NeRD 下载和运行之前）
+
+依据：EB-NeRD 的 General License Terms（https://recsys.eb.dk/assets/pdf/general_license_terms.pdf）第 4.2–4.5 条：数据只能在用户自己的 IT 环境里使用，不得转交第三方，除从 Ekstra Bladet 服务器下载外不得复制，发表的结果不得含数据原文。改动只依据许可条款，不依据任何结果。
+
+1. EB-NeRD 上不跑 G3。G3 要把 EB-NeRD 标题发到第三方 API，违反第 4.4、4.5 条。第 3 节 J1a、J1b 在 EB-NeRD 上只判 G2、G4，判据本身不变；第 2 节 J1 的 E1 retry 臂和随机列表闭环臂相应去掉 G3。MIND 上的 G3 照旧。
+2. EB-NeRD 只从 Ekstra Bladet 服务器直接下载到 AutoDL，转换（`data/ebnerd_prepare.py`）、参照点击者和第 6 节所有 EB-NeRD 命令都在 AutoDL 上跑，不在本地留副本。
+3. 论文、补充材料和复现包不含 EB-NeRD 原文：不引标题或正文作例子，不发布转换后的 parquet、含文章 ID 或模型原始输出的逐条 dump；只发布代码和汇总统计。
+
+第 6 节 EB-NeRD 命令相应改为：
+
+```text
+python scripts/d_track.py e1 --data ebnerd --gen {g2,g4} --arm retry
+python scripts/d_track.py placebo --data ebnerd --gen {g2,g4} --seed 0
+```

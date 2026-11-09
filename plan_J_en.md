@@ -123,3 +123,18 @@ python scripts/d_track.py e1 --data ebnerd --gen {g2,g4} --arm cal
 python scripts/d_track.py placebo --data ebnerd --gen {g2,g3,g4} --seed 0
 python scripts/d_track.py e3 --data ebnerd --gen {g2,g4} --rec nrms --seed 0 [--calibrate]
 ```
+
+## Amendment 1 (2026-11-10, before any EB-NeRD download or run)
+
+Basis: EB-NeRD General License Terms (https://recsys.eb.dk/assets/pdf/general_license_terms.pdf), sections 4.2–4.5: the dataset may be used only in the user's own IT environment, may not be transferred to a third party, may not be copied beyond the download from an Ekstra Bladet server, and published results may not contain exact parts of it. The changes rest on the license terms only, not on any result.
+
+1. G3 is not run on EB-NeRD. G3 would send EB-NeRD headlines to a third-party API, contrary to sections 4.4 and 4.5. On EB-NeRD, J1a and J1b in section 3 are judged on G2 and G4 only; the criteria themselves are unchanged. G3 is dropped from the EB-NeRD E1 retry arm and random-slate loop arm in section 2 (J1). G3 on MIND is unchanged.
+2. EB-NeRD is downloaded from the Ekstra Bladet server directly to AutoDL. Conversion (`data/ebnerd_prepare.py`), the reference clickers and all EB-NeRD commands in section 6 run on AutoDL; no local copy is kept.
+3. The paper, supplement and replication package contain no EB-NeRD content: no headlines or body text as examples, no converted parquet files, no per-impression dumps with article IDs or raw model outputs; only code and aggregate statistics are released.
+
+The EB-NeRD commands in section 6 become:
+
+```text
+python scripts/d_track.py e1 --data ebnerd --gen {g2,g4} --arm retry
+python scripts/d_track.py placebo --data ebnerd --gen {g2,g4} --seed 0
+```

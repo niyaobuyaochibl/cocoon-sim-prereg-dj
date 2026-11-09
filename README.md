@@ -8,7 +8,21 @@ Two analysis plans for *Validating LLM User Simulators for Information Cocoon Re
 
 Earlier registered verdicts (A2, R3 not supported) and the 10% and 0.05 lines are unchanged. Any later change is appended to the plan file as a dated amendment and published as a new release.
 
-SHA-256 of the registered files (CRLF line endings):
+## Versions
+
+- v1.0 (2026-11-10 00:39 CST): plans as registered.
+- v1.1 (2026-11-10): Amendment 1 appended to `prereg_j.md` and `plan_J_en.md`, before any EB-NeRD download or run. Under the EB-NeRD license terms, G3 (third-party API) is not run on EB-NeRD, EB-NeRD stays on the compute server, and no EB-NeRD content is published. `prereg_d.md` and `plan_D_en.md` are unchanged.
+
+SHA-256 of the files in v1.1 (CRLF line endings):
+
+```text
+5D135B1B5E6F320A16EE37FF1396AA2387D5B460F5C24908EA9ABD874E05ACCF  prereg_d.md
+AA11D5613AF31D0C31037F308AA1D9DEB227DF41903C354151C4D136D05C6869  prereg_j.md
+4949524BA2281166A9450F73B1385003E7395685FBD8949A89043EF57313F4C7  plan_D_en.md
+D76C2BB428450753F35C8E12F44CE85FFA408034B2DC9B1497D8CFE29B33D006  plan_J_en.md
+```
+
+SHA-256 in v1.0:
 
 ```text
 5D135B1B5E6F320A16EE37FF1396AA2387D5B460F5C24908EA9ABD874E05ACCF  prereg_d.md
